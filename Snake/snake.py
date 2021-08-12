@@ -1,8 +1,10 @@
 import tkinter as tk
-import random
 from tkinter import messagebox
+import random
 import pygame
 import math
+import sys
+
 
 class cube(object):
     rows = 20
@@ -47,7 +49,7 @@ class snake(object):
     def move(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
+                sys.exit()
 
 
             keys = pygame.key.get_pressed()
@@ -73,7 +75,6 @@ class snake(object):
                     self.dirnx = 0 
                     self.dirny = 1
                     self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
-                print(self.dirnx)
 
         for i, c in enumerate(self.body):
             p = c.pos[:]
@@ -165,6 +166,7 @@ def message_box(subject, content):
         pass
 
 def main():
+    pygame.init()
     global width, rows, s, snack
     width = 500
     rows = 20
