@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['snake.py'],
-             pathex=['/home/crispy/Desktop/python_games/Snake'],
+             pathex=['G:\\My Stuff\\contributions\\Pygames\\Snake'],
              binaries=[],
              datas=[],
              hiddenimports=[],
